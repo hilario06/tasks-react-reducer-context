@@ -6,10 +6,10 @@ export const MainApp = () => {
   return (
     <TaskProvider>
         <h2>LIST TASKS</h2>
-        <TaskList />
-        <div className='mt-3'>
-          <TaskAdd />
+        <div className='mb-3'>
+          <TaskList />
         </div>
+        <TaskAdd />
     </TaskProvider>
   )
 }

@@ -18,8 +18,9 @@ export const TaskAdd = () => {
 				done: false,
 			}
 		});
+		onResetForm();
 	}
-	
+
 	return (
 		<form onSubmit={ onFormSubmit }>
             <input 
