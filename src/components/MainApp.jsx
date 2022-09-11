@@ -5,7 +5,7 @@ import { TaskAdd } from './TaskAdd';
 export const MainApp = () => {
   return (
     <TaskProvider>
-        <h2>LIST TASKS</h2>
+        <h2>LISTA DE TAREAS</h2>
         <div className='mb-3'>
           <TaskList />
         </div>

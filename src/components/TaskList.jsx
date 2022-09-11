@@ -35,7 +35,7 @@ const onSearchSubmit = (event) => {
         />
 
         <button className="btn btn-outline-primary">
-          Search
+          Buscar
         </button>
       </form>
       
