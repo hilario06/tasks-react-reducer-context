@@ -1,6 +1,6 @@
 import React, { useReducer, useContex } from 'react';
 import { useForm } from '../hooks/useForm';
-import { TaskAdd } from './TaskAdd';
+
 
 const ADD_TASK = 'ADD_TASK';
 const REMOTE_TASK = 'REMOTE_TASK';
@@ -108,7 +108,7 @@ export const TaskApp = () => {
 			            ))
 			        }
 			    </ul>
-			    <TaskAdd onNewTask={onNewTask} />
+			    
 			</div>
 	    </taskContext.Provider>
 		

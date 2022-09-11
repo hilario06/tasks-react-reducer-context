@@ -1,19 +1,25 @@
 import React from 'react';
 import { useForm } from '../hooks/useForm';
+import { useContext } from "react"
+import { TaskContext } from "./context/TaskContext";
 
-export const TaskAdd = ({ onNewTask }) => {
-	// const state = useContext(myContext);
-	// const { user } = useContext( UserContext );
+export const TaskAdd = () => {
+
+	const { dispatch } = useContext( TaskContext );
 	const { nameTask, onInputChange, onResetForm } = useForm({ nameTask: '' });
 
 	const onFormSubmit = (event) => {
 		event.preventDefault();
-		return onNewTask({
-			id: new Date().getTime(),
-			nameTask: nameTask,
-			done: false,
-		})
+		dispatch({
+			type: 'ADD_TASK',
+			payload: {
+				id: new Date().getTime(),
+				nameTask: nameTask,
+				done: false,
+			}
+		});
 	}
+	
 	return (
 		<form onSubmit={ onFormSubmit }>
             <input 
